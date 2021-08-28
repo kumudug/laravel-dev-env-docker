@@ -7,7 +7,12 @@ services:
             - '8000:80'
         volumes:
             - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-    # php: 
+    php: # Extended official php image with extensions
+        build: 
+            context: ./dockerfiles
+            dockerfile: php.dockerfile
+        volumes:
+            - ./src:/var/www/html:delegated # Can't use ro as php will write some data. Delegates batches the updates back to host improving performance
     # mysql:
     # composer:
     # artisan:
