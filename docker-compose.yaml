@@ -20,7 +20,7 @@ services:
             args:
                 - USER_ID=1000 # get using id -u
                 - GROUP_ID=985 # get using id -g
-        volumes: - Use only in development mode
+        volumes: # Use only in development mode
             - ./src:/var/www/html:delegated # Can't use ro as php will write some data. Delegates batches the updates back to host improving performance
     mysql:
         image: mysql:5.7
