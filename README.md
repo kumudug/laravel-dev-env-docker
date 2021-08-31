@@ -13,3 +13,12 @@
 * Fixed up the artisan and npm containers as well. You can test them 
    - `docker-compose run --rm artisan migrate`
 * Stop using `docker-compose down -v`
+
+
+
+# Start and Stop
+
+* Start
+   - `docker-compose up -d --build server`
+* Stop
+   - `docker-compose down -v`
