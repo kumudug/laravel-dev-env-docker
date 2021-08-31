@@ -8,6 +8,9 @@ services:
         volumes:
             - ./src:/var/www/html # In the nginx.conf the root is given as root /var/www/html/public; so we need to bind the laravel apps src folder.  
             - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        depends_on: 
+            - php
+            - mysql
     php: # Extended official php image with extensions
         build: 
             context: ./dockerfiles

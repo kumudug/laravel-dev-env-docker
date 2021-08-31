@@ -8,3 +8,4 @@
    - `docker-compose up -d server php mysql`
    - Now if you visit `http://localhost:8000/` you should see the Laravel app
    - Stop using `docker-compose down`
+   - Added php and mysql as dependencies to server container so we can use `docker-compose up -d server`
