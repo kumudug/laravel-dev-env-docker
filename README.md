@@ -12,3 +12,4 @@
    - Force reevaluate whether the images needs to be rebuild `docker-compose up -d --build server`
 * Fixed up the artisan and npm containers as well. You can test them 
    - `docker-compose run --rm artisan migrate`
+* Stop using `docker-compose down -v`
